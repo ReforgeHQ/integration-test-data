@@ -1,7 +1,7 @@
 ---
 function: enabled
 tests:
-  - name: scope context with domain=prefab.cloud and user.key=michael
+  - name: scope context with domain=reforge.com and user.key=michael
     cases:
       - name: returns true from global context
         client: feature_flag_client
@@ -10,7 +10,7 @@ tests:
         contexts:
           block:
             "":
-              domain: prefab.cloud
+              domain: reforge.com
             user:
               key: michael
         input:
@@ -25,7 +25,7 @@ tests:
         contexts:
           block:
             "":
-              domain: prefab.cloud
+              domain: reforge.com
             user:
               key: michael
           local:
@@ -35,7 +35,7 @@ tests:
           flag: "feature-flag.in-seg.segment-and"
         expected:
           value: false
-  - name: scope context with domain=prefab.cloud and user.key=nobody
+  - name: scope context with domain=reforge.com and user.key=nobody
     cases:
       - name: returns false for untouched scope context
         client: feature_flag_client
@@ -80,7 +80,7 @@ tests:
               key: nobody
           local:
             "":
-              key: prefab.cloud
+              key: reforge.com
         input:
           flag: "feature-flag.in-seg.segment-and"
         expected:
@@ -99,7 +99,7 @@ tests:
             user:
               key: michael
             "":
-              domain: prefab.cloud
+              domain: reforge.com
         input:
           flag: "feature-flag.in-seg.segment-and"
         expected:
