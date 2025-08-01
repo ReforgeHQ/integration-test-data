@@ -3,38 +3,38 @@ function: enabled
 tests:
   - name: scope context with domain=prefab.cloud and user.key=michael
     cases:
-    - name: returns true from global context
-      client: feature_flag_client
-      function: enabled
-      type: BOOLEAN
-      contexts:
-        block:
-          "":
-            domain: prefab.cloud
-          user:
-            key: michael
-      input:
-        flag: "feature-flag.in-seg.segment-and"
-      expected:
-        value: true
-    - name: returns false due to local context override
-      client: feature_flag_client
-      function: enabled
-      type: BOOLEAN
+      - name: returns true from global context
+        client: feature_flag_client
+        function: enabled
+        type: BOOLEAN
+        contexts:
+          block:
+            "":
+              domain: prefab.cloud
+            user:
+              key: michael
+        input:
+          flag: "feature-flag.in-seg.segment-and"
+        expected:
+          value: true
+      - name: returns false due to local context override
+        client: feature_flag_client
+        function: enabled
+        type: BOOLEAN
 
-      contexts:
-        block:
-          "":
-            domain: prefab.cloud
-          user:
-            key: michael
-        local:
-          user:
-            key: james
-      input:
-        flag: "feature-flag.in-seg.segment-and"
-      expected:
-        value: false
+        contexts:
+          block:
+            "":
+              domain: prefab.cloud
+            user:
+              key: michael
+          local:
+            user:
+              key: james
+        input:
+          flag: "feature-flag.in-seg.segment-and"
+        expected:
+          value: false
   - name: scope context with domain=prefab.cloud and user.key=nobody
     cases:
       - name: returns false for untouched scope context
