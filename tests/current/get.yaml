@@ -77,7 +77,7 @@ tests:
         function: get
         type: STRING
         input:
-          key: "prefab.secrets.encryption.key"
+          key: "reforge.secrets.encryption.key"
         expected:
           value: "c87ba22d8662282abe8a0e4651327b579cb64a454ab0f4c170b45b15f049a221"
 
@@ -95,7 +95,7 @@ tests:
         function: get
         type: STRING
         input:
-          key: "a.secret.config"
+          key: "a.secret.config.reforge"
         expected:
           value: "hello.world"
 

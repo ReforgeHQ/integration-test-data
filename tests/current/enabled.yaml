@@ -63,7 +63,7 @@ tests:
           local:
             "":
               name: "lauren"
-              domain: "prefab.cloud"
+              domain: "reforge.com"
         input:
           flag: "feature-flag.properties.negative"
         expected:
@@ -76,7 +76,7 @@ tests:
           local:
             "":
               name: "michael"
-              domain: "prefab.cloud"
+              domain: "reforge.com"
         input:
           flag: "feature-flag.properties.negative"
         expected:
@@ -92,7 +92,7 @@ tests:
         contexts:
           block:
             "":
-              email: "jeff@prefab.cloud"
+              email: "jeff@reforge.com"
         input:
           flag: "feature-flag.ends-with-one-of.positive"
         expected:
@@ -132,7 +132,7 @@ tests:
         contexts:
           local:
             "":
-              email: "michael@prefab.cloud"
+              email: "michael@reforge.com"
         input:
           flag: "feature-flag.ends-with-one-of.negative"
         expected:
@@ -148,7 +148,7 @@ tests:
         contexts:
           block:
             user:
-              email: "foo@prefab.cloud"
+              email: "foo@reforge.com"
         input:
           flag: "feature-flag.starts-with-one-of.positive"
         expected:
@@ -160,7 +160,7 @@ tests:
         contexts:
           block:
             user:
-              email: "notfoo@prefab.cloud"
+              email: "notfoo@reforge.com"
         input:
           flag: "feature-flag.starts-with-one-of.positive"
         expected:
@@ -176,7 +176,7 @@ tests:
         contexts:
           block:
             user:
-              email: "notfoo@prefab.cloud"
+              email: "notfoo@reforge.com"
         input:
           flag: "feature-flag.starts-with-one-of.negative"
         expected:
@@ -188,7 +188,7 @@ tests:
         contexts:
           block:
             user:
-              email: "foo@prefab.cloud"
+              email: "foo@reforge.com"
         input:
           flag: "feature-flag.starts-with-one-of.negative"
         expected:
@@ -204,7 +204,7 @@ tests:
         contexts:
           block:
             user:
-              email: "somefoo@prefab.cloud"
+              email: "somefoo@reforge.com"
         input:
           flag: "feature-flag.contains-one-of.positive"
         expected:
@@ -216,7 +216,7 @@ tests:
         contexts:
           block:
             user:
-              email: "info@prefab.cloud"
+              email: "info@reforge.com"
         input:
           flag: "feature-flag.contains-one-of.positive"
         expected:
@@ -232,7 +232,7 @@ tests:
         contexts:
           block:
             user:
-              email: "info@prefab.cloud"
+              email: "info@reforge.com"
         input:
           flag: "feature-flag.contains-one-of.negative"
         expected:
@@ -244,7 +244,7 @@ tests:
         contexts:
           block:
             user:
-              email: "notfoo@prefab.cloud"
+              email: "notfoo@reforge.com"
         input:
           flag: "feature-flag.contains-one-of.negative"
         expected:
@@ -286,7 +286,7 @@ tests:
             user:
               key: "josh"
             "":
-              domain: "prefab.cloud"
+              domain: "reforge.com"
         input:
           flag: "feature-flag.in-seg.segment-and"
         expected:
@@ -300,7 +300,7 @@ tests:
             user:
               key: "michael"
             "":
-              domain: "prefab.cloud"
+              domain: "reforge.com"
         input:
           flag: "feature-flag.in-seg.segment-and"
         expected:
@@ -370,7 +370,7 @@ tests:
             user:
               key: "josh"
             "":
-              domain: "prefab.cloud"
+              domain: "reforge.com"
         input:
           flag: "feature-flag.in-segment.multiple-criteria.negative"
         expected:
@@ -398,7 +398,7 @@ tests:
             user:
               key: "josh"
             "":
-              domain: "prefab.cloud"
+              domain: "reforge.com"
         input:
           flag: "feature-flag.not-in-seg.segment-and"
         expected:
@@ -412,7 +412,7 @@ tests:
             user:
               key: "josh"
             "":
-              domain: "prefab.cloud"
+              domain: "reforge.com"
         input:
           flag: "feature-flag.in-seg.segment-and"
         expected:
@@ -426,7 +426,7 @@ tests:
             user:
               key: "michael"
             "":
-              domain: "prefab.cloud"
+              domain: "reforge.com"
         input:
           flag: "feature-flag.not-in-seg.segment-and"
         expected:
@@ -542,7 +542,7 @@ tests:
         client: feature_flag_client
         function: enabled
         input:
-          flag: "feature-flag.before.current-time"
+          flag: "feature-flag.before.current-time.reforge"
         expected:
           value: true
 
@@ -614,7 +614,7 @@ tests:
         client: feature_flag_client
         function: enabled
         input:
-          flag: "feature-flag.after.current-time"
+          flag: "feature-flag.after.current-time.reforge"
         expected:
           value: true
 

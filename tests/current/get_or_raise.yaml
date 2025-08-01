@@ -36,7 +36,7 @@ tests:
           message: "No value found for key 'any-key'"
         client_overrides:
           initialization_timeout_sec: 0.01
-          prefab_api_url: "https://app.staging-prefab.cloud"
+          reforge_api_url: "https://app.staging-reforge.com"
           on_init_failure: :return
 
       - name: get_or_raise can raise an error if the client does not initialize in time
@@ -48,10 +48,10 @@ tests:
         expected:
           status: raise
           error: initialization_timeout
-          message: "Prefab couldn't initialize in 0.01 second timeout. Trying to fetch key `any-key`."
+          message: "Reforge couldn't initialize in 0.01 second timeout. Trying to fetch key `any-key`."
         client_overrides:
           initialization_timeout_sec: 0.01
-          prefab_api_url: "https://app.staging-prefab.cloud"
+          reforge_api_url: "https://app.staging-reforge.com"
           on_init_failure: :raise
 
       - name: raises an error if a config is provided by a missing environment variable
