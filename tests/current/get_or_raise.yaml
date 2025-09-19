@@ -36,7 +36,7 @@ tests:
           message: "No value found for key 'any-key'"
         client_overrides:
           initialization_timeout_sec: 0.01
-          reforge_api_url: "https://app.staging-reforge.com"
+          reforge_api_url: "https://reforge.com" # needs to be a valid hostname that isn't our api
           on_init_failure: :return
 
       - name: get_or_raise can raise an error if the client does not initialize in time
@@ -51,7 +51,7 @@ tests:
           message: "Reforge couldn't initialize in 0.01 second timeout. Trying to fetch key `any-key`."
         client_overrides:
           initialization_timeout_sec: 0.01
-          reforge_api_url: "https://app.staging-reforge.com"
+          reforge_api_url: "https://reforge.com" # needs to be a valid hostname that isn't our api
           on_init_failure: :raise
 
       - name: raises an error if a config is provided by a missing environment variable
