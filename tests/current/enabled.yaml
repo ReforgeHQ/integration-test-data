@@ -22,6 +22,14 @@ tests:
         expected:
           value: false
 
+      - name: returns the correct value for a simple flag with ALWAYS_TRUE operator
+        client: feature_flag_client
+        function: enabled
+        input:
+          flag: "flag.always_true"
+        expected:
+          value: true
+
       #####################
       ## PROP_IS_ONE_OF ##
       #####################
